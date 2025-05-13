@@ -1,0 +1,32 @@
+[package]
+name = "bf-service"
+version = "0.1.0"
+edition = "2021"
+authors = ["Polana <andy@polana.dev>"]
+license = "Apache-2.0"
+
+[[bin]]
+name = "bf-service"
+path = "src/main.rs"
+
+[dependencies.jam-pvm-common]
+version = "0.1.21"
+features = ["service", "logging"]
+default-features = false
+
+[dependencies.jam-types]
+version = "0.1.21"
+default-features = false
+
+[dependencies.polkavm-derive]
+version = "0.19.0"
+
+[dependencies.scale]
+version = "3.6.12"
+features = ["derive"]
+default-features = false
+package = "parity-scale-codec"
+
+[dependencies.bounded-collections]
+version = "0.2.0"
+default-features = false
